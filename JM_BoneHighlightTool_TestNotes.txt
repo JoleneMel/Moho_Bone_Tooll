@@ -1,0 +1,136 @@
+🧪 JM Bone Highlight Tool – Test Notes
+1. Installation Check
+
+ Place all .lua files in Scripts/tool/JM_BoneTools/.
+
+ Restart Moho.
+
+ Confirm that the Bone Highlight Tool shows up in the Bone tools palette.
+
+ Open a bone layer → verify the tool is enabled only for bone layers.
+
+2. Highlighting
+
+ With a bone layer selected, drag the mouse across several bones.
+
+ Verify that bones inside the drag rectangle highlight in yellow.
+
+ Press ESC (if enabled) → all highlights clear.
+
+ Toggle Enable Clear All w/ ESC → confirm ESC only clears when toggle is ON.
+
+3. Sync With Moho Selection
+
+ Select bones in Moho normally → turn on Sync With Moho Selection.
+
+ Highlight should match Moho’s selection.
+
+ Deselect in Moho → highlights clear accordingly.
+
+ Toggle OFF → highlighting works independently.
+
+ Verify checkbox turns purple when ON and red when OFF.
+
+4. Bone Strength
+
+ Highlight bones.
+
+ Enter a number into Bone Strength (default should be 0.0).
+
+ Press Enter → confirm all highlighted bones adopt that strength value.
+
+ Change value again → bones update immediately.
+
+ Verify you can type floats (e.g. 0.5, 1.25).
+
+5. Clone + Mirror
+
+ Highlight a bone or set of bones.
+
+ Press Clone → bones duplicate in place.
+
+ Press Clone + Mirror → bones mirror to the opposite side.
+
+ Try each Mirror Axis option:
+
+Horizontal (Y Axis)
+
+Vertical (X Axis)
+
+Custom X (enter a custom X coordinate, e.g. 5.0)
+
+6. Clone Count
+
+ Highlight bones.
+
+ Set Clone Count = 1 → verify only one set of clones created.
+
+ Increase to 3 → three distinct copies appear.
+
+ Verify each clone is independent (not linked).
+
+7. Offset Options
+
+ Highlight bones.
+
+ Toggle Enable Offset ON.
+
+ Set Offset X = 2.0, Offset Y = 1.0.
+
+ Clone → new bones appear shifted by (2,1).
+
+ Set Offset Mode = Fixed → all clones shifted by same amount.
+
+ Set Offset Mode = Incremental → each additional clone shifts more (e.g. clone 1 = (2,1), clone 2 = (4,2)).
+
+ Toggle OFF → cloning returns to no offset.
+
+8. Group Management (Bone Library)
+
+ Highlight bones → save them to a new folder/group.
+
+ Verify group is added under the UI.
+
+ Save multiple groups → confirm they appear under different folders.
+
+ Close Moho and reopen → groups persist (check JM_BoneGroups_data.lua was created/updated).
+
+ Load a group into a new project → bones appear with correct names, strengths, and settings.
+
+9. Mirror Groups
+
+ Save a set of bones (e.g., Right Arm).
+
+ Clone + Mirror that group → verify Left Arm is generated correctly.
+
+ Check that names are suffixed properly (e.g., _mirror1, _mirror2).
+
+10. General Behavior
+
+ Verify tool does not work in non-bone layers.
+
+ Check UI responsiveness (no crashes when toggling options).
+
+ Test multiple workflows in sequence (highlight → set strength → clone → offset → save group).
+
+✅ Pass/Fail Log
+
+Use this section to record outcomes as you test:
+
+Highlighting: PASS / FAIL
+
+Sync with Moho: PASS / FAIL
+
+Bone Strength: PASS / FAIL
+
+Clone & Mirror: PASS / FAIL
+
+Clone Count: PASS / FAIL
+
+Offset: PASS / FAIL
+
+Groups: PASS / FAIL
+
+Mirror Groups: PASS / FAIL
+
+General Behavior: PASS / FAIL
